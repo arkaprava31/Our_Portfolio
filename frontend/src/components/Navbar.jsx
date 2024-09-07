@@ -34,13 +34,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex lg:flex-row md:flex-row flex-col  justify-between mt-4 items-center">
         {/* Logo */}
         <div className="text-2xl font-bold mb-2">
-          <a href="#home">Logo</a>
+          <a href="">Logo</a>
         </div>
 
         {/* Links */}
         <nav className="space-x-6 text-lg goldman-bold">
           <a
-            href="#home"
+            href=""
             className={`hover:text-gray-300 transition-colors ${activeSection === '' ? 'underline underline-offset-8 decoration-4 text-2xl text-[#B2A2F4] decoration-[#B2A2F4]' : ''}`}
           >
             Home
