@@ -4,13 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 .goldman-regular {
     font-family: "Goldman", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   
-  .goldman-bold {
+.goldman-bold {
     font-family: "Goldman", sans-serif;
     font-weight: 700;
     font-style: normal;
