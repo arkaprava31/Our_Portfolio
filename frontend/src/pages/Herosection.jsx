@@ -40,18 +40,20 @@ const Herosection = () => {
 		<div className="section-bg flex flex-col md:flex-row gap-4 items-center justify-center px-4 md:px-16 py-10 md:text-left text-center">
 			<div className="text-2xl md:text-4xl goldman-bold md:w-[543px]">
 				<div className="text-left md:px-0 px-6">
-						<h1 className="text-main mb-4 ">
-					A Team of Experts, Crafting <br />
-					& Optimizing Web Solutions.
-				</h1>
-				<h2 className="text-2xl md:text-3xl">
-					We work on{" "}
-					<FlipWords words={words} className="text-[#8D75EE]" />
-				</h2>
+					<h1 className="text-main  ">
+						A Team of Experts, Crafting
+					</h1>
+					<h1>& Optimizing Web Solutions.</h1>
+					<h2 className="text-2xl md:text-3xl">
+						We work on
+						<FlipWords words={words} className="text-[#8D75EE]" />
+					</h2>
 				</div>
-			
+
 				<p className="text-sm text-gray-400 mt-6 mb-8">
-					A team of web developers collaborates to design, build, and maintain websites and web applications, ensuring functionality, user experience, and performance across digital platforms.
+					A team of web developers collaborates to design, build, and maintain
+					websites and web applications, ensuring functionality, user
+					experience, and performance across digital platforms.
 				</p>
 				<button
 					onClick={handleScrollToProjects}

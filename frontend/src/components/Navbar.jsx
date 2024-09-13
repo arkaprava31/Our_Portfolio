@@ -100,7 +100,7 @@ const Navbar = () => {
 
 	return (
 		<div className="fixed top-0 left-0 md:bg-transparent bg-[#13132EB2] h-[120px] md:border-none backdrop-filter backdrop-blur-sm bg-opacity-30  border-[#13132EB2] w-full text-white py-4 px-6 md:shadow-none shadow-lg z-50">
-			<div className="max-w-7xl mx-auto flex   justify-between  items-center mt-8 md:mt-10">
+			<div className="max-w-7xl mx-auto flex   justify-between  items-center mt-8 md:mt-6">
 				{/* Logo */}
 				<div className="text-2xl font-bold mb-2">
 					<a href="">Logo</a>
