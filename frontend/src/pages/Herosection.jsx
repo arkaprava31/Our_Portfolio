@@ -38,7 +38,7 @@ const Herosection = () => {
 
 	return (
 		<div className="section-bg flex flex-col md:flex-row gap-4 items-center justify-center px-4 md:px-16 py-10 md:text-left text-center">
-			<div className="text-2xl md:text-4xl goldman-bold md:w-[543px] w-full flex flex-col items-start gap-2">
+			<div className="text-2xl md:text-4xl goldman-regular md:w-[543px] w-full flex flex-col items-start gap-2">
 				<div className="md:px-0 px-6 flex flex-col items-center gap-4">
 					<h1 className="text-main w-full text-left leading-[3rem]">
 						A Team of Experts, Crafting & Optimizing Web Solutions.
@@ -49,7 +49,7 @@ const Herosection = () => {
 					</h2>
 				</div>
 
-				<p className="text-sm text-gray-400 mt-6 mb-8 w-full text-left font-light tracking-wider leading-6">
+				<p className="text-sm text-gray-400 mt-6 mb-8 w-full text-left tracking-wider leading-5">
 					A team of web developers collaborates to design, build, and maintain
 					websites and web applications, ensuring functionality, user
 					experience, and performance across digital platforms.
@@ -61,7 +61,7 @@ const Herosection = () => {
 					Let's Talk
 				</button>
 			</div>
-			<div className="md:w-1/2 mt-8 md:mt-0 ">
+			<div className="md:w-1/2 mt-8 md:mt-0 w-full flex items-center justify-center">
 				<img
 					src="/images/HeroImage.png"
 					alt="Hero Section Image"

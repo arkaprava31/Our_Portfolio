@@ -31,15 +31,15 @@ const AboutUsSection = () => {
 
 	return (
 		<section
-			className="min-h-screen bg-[url('/images/bg.png')] bg-cover bg-center"
+			className="w-full min-h-screen bg-[url('/images/bg.png')] bg-cover bg-center"
 			id="projects"
 		>
 			{/* Header Section */}
 			<div
-				className="min-h-[200px] bg-[#EAEAEA] flex items-center justify-center"
+				className="w-full min-h-[200px] bg-[#EAEAEA] flex items-center justify-center"
 				id="projects"
 			>
-				<p className="text-black text-2xl md:text-3xl font-semibold text-center">
+				<p className="text-black text-2xl md:text-[2.25rem] goldman-regular text-center">
 					"Coding Your Vision to Reality"
 				</p>
 			</div>
