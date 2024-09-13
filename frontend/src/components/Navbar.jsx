@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
+import {
+	IconBrandGithub,
+	IconBrandX,
+	IconExchange,
+	IconHome,
+	IconNewSection,
+	IconTerminal2,
+} from "@tabler/icons-react";
+import { FloatingDock } from "./ui/floating-dock";
 
 const Navbar = () => {
+	// eslint-disable-next-line no-unused-vars
 	const [activeSection, setActiveSection] = useState("");
 
 	useEffect(() => {
@@ -17,6 +27,7 @@ const Navbar = () => {
 				}
 			});
 		}, options);
+		("");
 
 		sections.forEach((section) => {
 			observer.observe(section);
@@ -28,58 +39,78 @@ const Navbar = () => {
 			});
 		};
 	}, []);
+	const links = [
+		{
+			title: "Home",
+			icon: (
+				<IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+			),
+			href: "#",
+		},
+
+		{
+			title: "Products",
+			icon: (
+				<IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+			),
+			href: "#",
+		},
+		{
+			title: "Components",
+			icon: (
+				<IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+			),
+			href: "#",
+		},
+		{
+			title: "Aceternity UI",
+			icon: (
+				<img
+					src="https://assets.aceternity.com/logo-dark.png"
+					width={20}
+					height={20}
+					alt="Aceternity Logo"
+				/>
+			),
+			href: "#",
+		},
+		{
+			title: "Changelog",
+			icon: (
+				<IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+			),
+			href: "#",
+		},
+
+		{
+			title: "Twitter",
+			icon: (
+				<IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+			),
+			href: "#",
+		},
+		{
+			title: "GitHub",
+			icon: (
+				<IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+			),
+			href: "#",
+		},
+	];
 
 	return (
-		<div className="fixed top-0 left-0 bg-[#13132EB2] backdrop-filter backdrop-blur-sm bg-opacity-30 h-[120px] border border-[#13132EB2] w-full text-white py-4 px-6 shadow-lg z-50">
-			<div className="max-w-7xl mx-auto flex lg:flex-row md:flex-row flex-col  justify-between mt-4 items-center">
+		<div className="fixed top-0 left-0 md:bg-transparent bg-[#13132EB2] h-[120px] md:border-none backdrop-filter backdrop-blur-sm bg-opacity-30  border-[#13132EB2] w-full text-white py-4 px-6 md:shadow-none shadow-lg z-50">
+			<div className="max-w-7xl mx-auto flex   justify-between  items-center mt-8 md:mt-10">
 				{/* Logo */}
 				<div className="text-2xl font-bold mb-2">
 					<a href="">Logo</a>
 				</div>
 
 				{/* Links */}
-				<nav className="lg:space-x-6 md:space-x-6  space-x-4 text-lg goldman-bold flex justify-center items-center">
-					<a
-						href=""
-						className={`hover:text-gray-300 transition-colors ${
-							activeSection === ""
-								? "underline underline-offset-8 decoration-4 text-2xl  text-[#B2A2F4] decoration-[#B2A2F4]"
-								: ""
-						}`}
-					>
-						Home
-					</a>
-					<a
-						href="#projects"
-						className={`hover:text-gray-300 transition-colors ${
-							activeSection === "projects"
-								? "underline underline-offset-8 decoration-4  text-2xl text-[#B2A2F4] decoration-[#B2A2F4]"
-								: ""
-						}`}
-					>
-						Projects
-					</a>
-					<a
-						href="#testimonials"
-						className={`hover:text-gray-300 transition-colors ${
-							activeSection === "testimonials"
-								? "underline underline-offset-8 decoration-4  text-2xl text-[#B2A2F4] decoration-[#B2A2F4]"
-								: ""
-						}`}
-					>
-						Testimonials
-					</a>
-					<a
-						href="#contactus"
-						className={`hover:text-gray-300 transition-colors ${
-							activeSection === "contactus"
-								? "underline underline-offset-8 decoration-4  text-2xl text-[#B2A2F4] decoration-[#B2A2F4]"
-								: ""
-						}`}
-					>
-						Contacts 
-					</a>
-				</nav>
+				<FloatingDock
+					mobileClassName="" // only for demo, remove for production
+					items={links}
+				/>
 			</div>
 		</div>
 	);

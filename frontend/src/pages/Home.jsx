@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 import AboutUsSection from './AboutUsSection';
 import Herosection from './Herosection';
-import ProjectSectios from './ProjectSections';
 
 const Home = () => {
     return (
