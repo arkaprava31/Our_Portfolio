@@ -1,31 +1,55 @@
-import { FocusCards } from "../components/ui/focus-cards";
+import { BackgroundBeamsWithCollision } from "../components/ui/background-beam-with-collision";
+import AnimatedTooltip from "../components/ui/tooltip";
+import {
+	Tabs,
+	TabsHeader,
+	TabsBody,
+	Tab,
+	TabPanel,
+} from "@material-tailwind/react";
 
 /* eslint-disable react/no-unescaped-entities */
 const AboutUsSection = () => {
-	const cards = [
+	const data = [
 		{
-			title: "Forest Adventure",
-			src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			label: "HTML",
+			value: "html",
+			desc: `It really matters and then like it really doesn't matter.
+		  What matters is the people who are sparked by it. And the people
+		  who are like offended by it, it doesn't matter.`,
 		},
 		{
-			title: "Valley of life",
-			src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			label: "React",
+			value: "react",
+			desc: `Because it's about motivating the doers. Because I'm here
+		  to follow my dreams and inspire other people to follow their dreams, too.`,
+		},
+	
+	];
+	const tools = [
+		{
+			id: 1,
+			name: "React",
+			designation: "Frontend Library",
+			image: "/images/ex.png", // Replace with actual image paths
 		},
 		{
-			title: "Sala behta hi jayega",
-			src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			id: 2,
+			name: "Node.js",
+			designation: "Backend Runtime",
+			image: "/images/nextjs.png",
 		},
 		{
-			title: "Camping is for pros",
-			src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			id: 3,
+			name: "MongoDB",
+			designation: "NoSQL Database",
+			image: "/path/to/mongodb-icon.png",
 		},
 		{
-			title: "The road not taken",
-			src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		},
-		{
-			title: "The First Rule",
-			src: "https://assets.aceternity.com/the-first-rule.png",
+			id: 4,
+			name: "Cloudinary",
+			designation: "Cloud Storage",
+			image: "/path/to/cloudinary-icon.png",
 		},
 	];
 
@@ -34,31 +58,47 @@ const AboutUsSection = () => {
 			className="w-full min-h-screen bg-[url('/images/bg.png')] bg-cover bg-center"
 			id="projects"
 		>
-			{/* Header Section */}
-			<div
-				className="w-full min-h-[200px] bg-[#EAEAEA] flex items-center justify-center"
-				id="projects"
-			>
-				<p className="text-black text-2xl md:text-[2.25rem] goldman-regular text-center">
-					"Coding Your Vision to Reality"
-				</p>
-			</div>
-
 			{/* Expertise Section */}
 			<div className="flex flex-col justify-between items-center py-10 md:py-16">
 				<div className="mx-auto w-11/12 max-w-5xl">
-					<p className="text-xl md:text-2xl font-bold text-center">
-						Our Expertise
-					</p>
-					<p className="mt-4 text-lg md:text-xl text-center">
-						Out skills description here
-					</p>
-				</div>
-			</div>
+					<section className="py-12 bg-transparent">
+						<div className="container mx-auto">
+							<p className="text-3xl md:text-4xl font-bold text-center text-white">
+								Our Expertise
+							</p>
 
-			{/* Projects Section */}
-			<div className="py-10 px-4 md:py-16">
-				<FocusCards cards={cards} />
+							{/* Expertise Grid */}
+							<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
+								{/* Animated Tooltip for Tools */}
+								<AnimatedTooltip items={tools} />
+							</div>
+						</div>
+					</section>
+					<Tabs id="custom-animation" value="html">
+							<TabsHeader>
+								{data.map(({ label, value }) => (
+									<Tab key={value} value={value}>
+										{label}
+									</Tab>
+								))}
+							</TabsHeader>
+							<TabsBody
+								animate={{
+									initial: { y: 250 },
+									mount: { y: 0 },
+									unmount: { y: 250 },
+								}}
+							>
+								{data.map(({ value, desc }) => (
+									<TabPanel key={value} value={value}>
+										{desc}
+									</TabPanel>
+								))}
+							</TabsBody>
+						</Tabs>
+
+					{/* Technologies Tabs */}
+				</div>
 			</div>
 		</section>
 	);

@@ -37,34 +37,47 @@ const FloatingDockMobile = ({ items, className }) => {
 			</button>
 			<AnimatePresence>
 				{open && (
-					<motion.div
-						layoutId="nav"
-						className="absolute top-full mt-2 inset-x-0 flex flex-col gap-2"
-					>
-						{items.map((item, idx) => (
-							<motion.div
-								key={item.title}
-								initial={{ opacity: 0, y: -10 }}
-								animate={{ opacity: 1, y: 0 }}
-								exit={{
-									opacity: 0,
-									y: -10,
-									transition: {
-										delay: idx * 0.05,
-									},
-								}}
-								transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-							>
-								<Link
-									href={item.href}
+					<>
+						{/* Blur background */}
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							className="fixed inset-0  bg-black bg-opacity-70 backdrop-filter  backdrop-blur-sm min-h-screen"
+							onClick={() => setOpen(false)} // Close menu when background is clicked
+						/>
+						{/* Menu items */}
+						<motion.div
+							layoutId="nav"
+							className="absolute top-full mt-2 inset-x-0 flex flex-col gap-2"
+						>
+							{items.map((item, idx) => (
+								<motion.div
 									key={item.title}
-									className="h-10 w-10 rounded-full bg-transparent flex items-center justify-center"
+									initial={{ opacity: 0, y: -10 }}
+									animate={{ opacity: 1, y: 0 }}
+									exit={{
+										opacity: 0,
+										y: -10,
+										transition: {
+											delay: idx * 0.05,
+										},
+									}}
+									transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+									className="flex gap-1 items-center text-white"
 								>
-									<div className="h-4 w-4">{item.icon}</div>
-								</Link>
-							</motion.div>
-						))}
-					</motion.div>
+									
+									<Link
+										href={item.href}
+										key={item.title}
+										className="h-10 w-10 rounded-full bg-transparent flex items-center justify-center"
+									>
+										<div className="h-4 w-4 text-white">{item.icon}</div>
+									</Link>
+								</motion.div>
+							))}
+						</motion.div>
+					</>
 				)}
 			</AnimatePresence>
 		</div>

@@ -49,14 +49,14 @@ const Herosection = () => {
 					</h2>
 				</div>
 
-				<p className="text-sm text-gray-400 mt-6 mb-8 w-full text-left tracking-wider leading-5">
+				<p className="text-sm text-gray-400 mt-6 mb-8 w-full text-left tracking-wider leading-5 md:p-0 p-4">
 					A team of web developers collaborates to design, build, and maintain
 					websites and web applications, ensuring functionality, user
 					experience, and performance across digital platforms.
 				</p>
 				<button
 					onClick={handleScrollToProjects}
-					className="bg-[#8D75EE] text-white rounded-lg text-lg py-2.5 px-6 hover:bg-[#6D5DC9] transition-colors tracking-widest"
+					className="bg-[#8D75EE] text-white rounded-lg text-lg py-2.5 px-6 hover:bg-[#6D5DC9] md:ml-0 ml-4 transition-colors tracking-widest"
 				>
 					Let's Talk
 				</button>
