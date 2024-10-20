@@ -42,7 +42,7 @@ const ProjectSections = () => {
 		},
 	];
 	return (
-	<section className="section-bg">
+	<section className="section-bg2 h-auto">
     	{/* Projects Section */}
 			<div className="max-w-5xl mx-auto p-8">
 				<HoverEffect items={projects} />

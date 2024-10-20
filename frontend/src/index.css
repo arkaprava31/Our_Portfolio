@@ -28,3 +28,24 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.section-bg2 {
+    width: 100%;
+    height: full;
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ffffff20; /* Thumb color remains as it is */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* Track background is now transparent */
+}
+

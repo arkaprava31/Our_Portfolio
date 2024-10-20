@@ -2,11 +2,6 @@
 
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
-import {
-	IconBrandGithub,
-	IconBrandGoogle,
-	IconBrandOnlyfans,
-} from "@tabler/icons-react";
 import { cn } from "../libs/utils";
 
 export function SignupFormDemo() {
@@ -16,22 +11,16 @@ export function SignupFormDemo() {
 	};
 
 	return (
-		<div className="max-w-lg w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-transparent text-white dark:bg-black">
-			<h2 className="font-bold text-2xl mb-2">
-				Welcome to Aceternity
-			</h2>
-			<p className="text-sm max-w-sm mb-6">
-				Login to Aceternity if you can, because we don&apos;t have a login flow yet.
-			</p>
-			<form className="text-left" onSubmit={handleSubmit}>
-				{/* Full Name Input */}
+		<div className=" w-full mx-auto  md:rounded-2xl p-4 md:p-8 shadow-2xl border border-[#13132E] rounded-xl bg-transparent text-white dark:bg-black">
+			<form className="text-left text-md w-full font-semibold" onSubmit={handleSubmit}>
+				{/* Name Input */}
 				<LabelInputContainer className="mb-4">
-					<Label htmlFor="fullname" className="text-white">
-						Full Name
+					<Label htmlFor="name" className="text-white font-semibold">
+						Your Name
 					</Label>
 					<Input
-						id="fullname"
-						placeholder="John Doe"
+						id="name"
+						placeholder="Enter your name"
 						type="text"
 						className="bg-[#13132E] text-white h-12 rounded-md px-4"
 					/>
@@ -39,51 +28,48 @@ export function SignupFormDemo() {
 
 				{/* Email Input */}
 				<LabelInputContainer className="mb-4">
-					<Label htmlFor="email" className="text-white">
-						Email Address
+					<Label htmlFor="email" className="text-white font-semibold">
+						Your Email Address
 					</Label>
 					<Input
 						id="email"
-						placeholder="john@example.com"
+						placeholder="Enter your email"
 						type="email"
 						className="bg-[#13132E] text-white h-12 rounded-md px-4"
 					/>
 				</LabelInputContainer>
 
-				{/* Topic Input */}
-				<LabelInputContainer className="mb-4">
-					<Label htmlFor="topic" className="text-white">
-						Topic
+				{/* Project Type Input */}
+				<LabelInputContainer className="mb-4 ">
+					<Label htmlFor="projectType" className="text-white font-semibold">
+						Project Type
 					</Label>
 					<Input
-						id="topic"
-						placeholder="What would you like to discuss?"
+						id="projectType"
+						placeholder="Website, eCommerce, etc."
 						type="text"
 						className="bg-[#13132E] text-white h-12 rounded-md px-4"
 					/>
 				</LabelInputContainer>
 
-				{/* Twitter Password (for fun) */}
+				{/* Message Input */}
 				<LabelInputContainer className="mb-6">
-					<Label htmlFor="twitterpassword" className="text-white">
-						Your Twitter Password
+					<Label htmlFor="message" className="text-white text-md ">
+						Message
 					</Label>
 					<textarea
-						id="twitterpassword"
-						placeholder=""
-						className="bg-[#13132E] text-white rounded-md px-4 py-2 h-24 "
-					>
-
-                    <BottomGradient />
-                    </textarea>
+						id="message"
+						placeholder="Describe your project"
+						className="bg-[#13132E] text-white rounded-md text-sm py-2 px-4 min-h-24"
+					></textarea>
 				</LabelInputContainer>
 
 				{/* Submit Button */}
 				<button
-					className="relative group/btn bg-gradient-to-br from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 w-full text-white rounded-md h-12 font-medium shadow-lg hover:shadow-2xl transition-shadow"
+					className="relative group/btn bg-gradient-to-br from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 w-full text-white text-xl rounded-md h-12 font-medium shadow-lg hover:shadow-2xl transition-shadow"
 					type="submit"
 				>
-					Sign Up &rarr;
+					Send Message
 					<BottomGradient />
 				</button>
 

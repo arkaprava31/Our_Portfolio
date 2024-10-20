@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
+import { SignupFormDemo } from "../components/SignUpForm";
 import { TracingBeam } from "../components/ui/tracing-beam";
 import AboutUsSection from "./AboutUsSection";
+import ContactUsSection from "./ContactUsSection";
 import Herosection from "./Herosection";
 import ProjectSections from "./ProjectSections";
 
@@ -12,6 +14,7 @@ const Home = () => {
 
 				<AboutUsSection />
 				<ProjectSections />
+				<ContactUsSection/>
 			</div>
 		</>
 	);
