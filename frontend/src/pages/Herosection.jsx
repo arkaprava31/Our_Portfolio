@@ -37,7 +37,7 @@ const Herosection = () => {
 	};
 
 	return (
-		<div className="section-bg flex flex-col md:flex-row gap-4 items-center justify-center px-4 md:px-16 py-10 md:text-left text-center">
+		<div className="w-full min-h-screen flex flex-col md:flex-row gap-4 items-center justify-center px-4 md:px-16 py-10 md:text-left text-center">
 			<div className="text-2xl md:text-4xl goldman-regular md:w-[543px] w-full flex flex-col items-start gap-2">
 				<div className="md:px-0 px-6 flex flex-col items-center gap-4">
 					<h1 className="text-main w-full text-left leading-[3rem]">

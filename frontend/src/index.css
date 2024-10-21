@@ -6,34 +6,19 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 .goldman-regular {
-    font-family: "Goldman", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.goldman-bold {
-    font-family: "Goldman", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  
-.section-bg {
-    width: 100%;
-    height: 100vh;
-    background-image: url('images/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  font-family: "Goldman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.section-bg2 {
-    width: 100%;
-    height: full;
-    background-image: url('images/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+
+.goldman-bold {
+  font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -41,11 +26,12 @@ html {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #ffffff20; /* Thumb color remains as it is */
+  background-color: #ffffff20;
+  /* Thumb color remains as it is */
   border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background-color: transparent; /* Track background is now transparent */
+  background-color: transparent;
+  /* Track background is now transparent */
 }
-

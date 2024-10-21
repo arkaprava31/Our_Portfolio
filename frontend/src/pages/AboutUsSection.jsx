@@ -24,7 +24,7 @@ const AboutUsSection = () => {
 			desc: `Because it's about motivating the doers. Because I'm here
 		  to follow my dreams and inspire other people to follow their dreams, too.`,
 		},
-	
+
 	];
 	const tools = [
 		{
@@ -54,10 +54,7 @@ const AboutUsSection = () => {
 	];
 
 	return (
-		<section
-			className="w-full min-h-screen bg-[url('/images/bg.png')] bg-cover bg-center"
-			id="projects"
-		>
+		<div className="w-full min-h-screen" id="projects">
 			{/* Expertise Section */}
 			<div className="flex flex-col justify-between items-center py-10 md:py-16">
 				<div className="mx-auto w-11/12 max-w-5xl">
@@ -75,32 +72,32 @@ const AboutUsSection = () => {
 						</div>
 					</section>
 					<Tabs id="custom-animation" value="html">
-							<TabsHeader>
-								{data.map(({ label, value }) => (
-									<Tab key={value} value={value}>
-										{label}
-									</Tab>
-								))}
-							</TabsHeader>
-							<TabsBody
-								animate={{
-									initial: { y: 250 },
-									mount: { y: 0 },
-									unmount: { y: 250 },
-								}}
-							>
-								{data.map(({ value, desc }) => (
-									<TabPanel key={value} value={value}>
-										{desc}
-									</TabPanel>
-								))}
-							</TabsBody>
-						</Tabs>
+						<TabsHeader>
+							{data.map(({ label, value }) => (
+								<Tab key={value} value={value}>
+									{label}
+								</Tab>
+							))}
+						</TabsHeader>
+						<TabsBody
+							animate={{
+								initial: { y: 250 },
+								mount: { y: 0 },
+								unmount: { y: 250 },
+							}}
+						>
+							{data.map(({ value, desc }) => (
+								<TabPanel key={value} value={value}>
+									{desc}
+								</TabPanel>
+							))}
+						</TabsBody>
+					</Tabs>
 
 					{/* Technologies Tabs */}
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 };
 
