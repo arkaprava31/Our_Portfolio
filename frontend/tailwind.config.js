@@ -14,6 +14,9 @@ module.exports = withMT({
 	content: ["./src/**/*.{ts,tsx,js,jsx}"],
 	darkMode: "class",
 	theme: {
+		colors: {
+			main: "#13132E"
+		},
 		extend: {
 			fontSize: {
 				sm: ['0.875rem', { lineHeight: '1.25rem' }], // 14px

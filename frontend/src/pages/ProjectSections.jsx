@@ -3,7 +3,7 @@
 import { HoverEffect } from "../components/ui/card-hover-effect";
 
 const ProjectSections = () => {
-  const projects = [
+	const projects = [
 		{
 			title: "Stripe",
 			description:
@@ -42,14 +42,17 @@ const ProjectSections = () => {
 		},
 	];
 	return (
-	<section className="section-bg2 h-auto">
-    	{/* Projects Section */}
-			<div className="max-w-5xl mx-auto p-8">
-				<HoverEffect items={projects} />
+		<section className="section-bg2 h-auto">
+
+			{/* Projects Section */}
+			<div className="max-w-5xl mx-auto px-8 pt-24">
+
+				<p className="mt-10 text-center text-white font-semibold text-3xl goldman-regular">Our Work</p>
+				<HoverEffect items={projects} className={"cursor-pointer"}/>
 			</div>
 
 
-  </section>
+		</section>
 	);
 };
 

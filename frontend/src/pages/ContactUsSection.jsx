@@ -5,9 +5,11 @@ import { motion } from "framer-motion";
 
 const ContactUsSection = () => {
 	return (
-		<div className="section-bg2 flex flex-col items-center gap-10 px-6 py-16 lg:px-16 lg:py-24">
+		<>
+		<div className="h-10"></div>
+		<div className="section-bg2 flex flex-col items-center gap-10 px-6 py-16 lg:px-16 lg:py-24 " id="contacts">
 			<motion.p
-				className="font-semibold text-white text-lg"
+				className="font-semibold text-white goldman-regular text-3xl"
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.6 }}
@@ -24,7 +26,7 @@ const ContactUsSection = () => {
 						transition={{ duration: 0.6 }}
 						viewport={{ once: true }}
 					>
-						Let's Build Something Amazing!
+						Let's Build With Us!
 					</motion.h2>
 					<motion.p
 						className="text-lg text-gray-300"
@@ -99,6 +101,8 @@ const ContactUsSection = () => {
 				</motion.div>
 			</div>
 		</div>
+		</>
+		
 	);
 };
 

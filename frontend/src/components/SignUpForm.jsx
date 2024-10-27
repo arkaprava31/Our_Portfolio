@@ -11,7 +11,7 @@ export function SignupFormDemo() {
 	};
 
 	return (
-		<div className=" w-full mx-auto  md:rounded-2xl p-4 md:p-8 shadow-2xl border border-[#13132E] rounded-xl bg-transparent text-white dark:bg-black">
+		<div className=" w-full mx-auto  md:rounded-2xl p-4 md:p-8 shadow-2xl border border-[#13132E] rounded-xl bg-transparent text-white dark:bg-black ">
 			<form className="text-left text-md w-full font-semibold" onSubmit={handleSubmit}>
 				{/* Name Input */}
 				<LabelInputContainer className="mb-4">
@@ -73,8 +73,6 @@ export function SignupFormDemo() {
 					<BottomGradient />
 				</button>
 
-				{/* Divider */}
-				<div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 			</form>
 		</div>
 	);

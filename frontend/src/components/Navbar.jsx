@@ -6,7 +6,10 @@ import {
 	IconHome,
 	IconNewSection,
 	IconTerminal2,
+	IconAddressBook
 } from "@tabler/icons-react";
+import { TbBulb } from "react-icons/tb";
+import { GrProjects } from "react-icons/gr";
 import { FloatingDock } from "./ui/floating-dock";
 
 const Navbar = () => {
@@ -45,62 +48,39 @@ const Navbar = () => {
 			icon: (
 				<IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
 			),
-			href: "#",
+			href: "/",
 		},
 
 		{
-			title: "Products",
+			title: "Our Expertise",
 			icon: (
-				<IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+				<TbBulb className="h-full w-full text-neutral-500 dark:text-neutral-300" />
 			),
-			href: "#",
+			href: "/expertise",
 		},
 		{
-			title: "Components",
+			title: "Projects",
 			icon: (
-				<IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+				<GrProjects className="h-full w-full text-neutral-500 dark:text-neutral-300 py-0.5" />
 			),
-			href: "#",
+			href: "/projects",
 		},
+		
 		{
-			title: "Aceternity UI",
+			title: "Contacts",
 			icon: (
-				<img
-					src="https://assets.aceternity.com/logo-dark.png"
-					width={20}
-					height={20}
-					alt="Aceternity Logo"
-				/>
+				<IconAddressBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
 			),
-			href: "#",
-		},
-		{
-			title: "Changelog",
-			icon: (
-				<IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-			),
-			href: "#",
+			href: "/contacts",
 		},
 
-		{
-			title: "Twitter",
-			icon: (
-				<IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-			),
-			href: "#",
-		},
-		{
-			title: "GitHub",
-			icon: (
-				<IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-			),
-			href: "#",
-		},
+
+		
 	];
 
 	return (
-		<div className="fixed top-0 left-0 md:bg-transparent bg-[#13132EB2] h-[120px] md:border-none   border-[#13132EB2] w-full text-white py-4 px-6 md:shadow-none shadow-lg z-50">
-			<div className="max-w-7xl mx-auto flex   justify-between  items-center mt-8 md:mt-6">
+		<div className="fixed top-0 left-0 md:bg-transparent bg-[#13132EB2] h-[80px] md:border-none   border-[#13132EB2] w-full text-white py-4 px-6 md:shadow-none shadow-lg z-50">
+			<div className="max-w-7xl mx-auto flex   justify-between  items-center mt-2 md:mt-6">
 				{/* Logo */}
 				{/* <div className="text-2xl font-bold mb-2">
 					<a href="">Logo</a>

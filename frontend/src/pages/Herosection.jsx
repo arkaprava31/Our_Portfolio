@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FlipWords } from "../components/ui/flip-words";
 
 const Herosection = () => {
-	const words = ["Mern Stack", "NextJs", "React Native", "Expo"];
+	const words = ["Mern Stack", "NextJs", "React ", "Expo"];
 	const [activeSection, setActiveSection] = useState("");
 
 	useEffect(() => {
@@ -31,16 +31,16 @@ const Herosection = () => {
 		};
 	}, []);
 
-	const handleScrollToProjects = () => {
-		const projectSection = document.getElementById("projects");
-		projectSection.scrollIntoView({ behavior: "smooth" });
+	const handleScroll = () => {
+		const Section = document.getElementById("contacts");
+		Section.scrollIntoView({ behavior: "smooth" });
 	};
 
 	return (
 		<div className="w-full min-h-screen flex flex-col md:flex-row gap-4 items-center justify-center px-4 md:px-16 py-10 md:text-left text-center">
 			<div className="text-2xl md:text-4xl goldman-regular md:w-[543px] w-full flex flex-col items-start gap-2">
 				<div className="md:px-0 px-6 flex flex-col items-center gap-4">
-					<h1 className="text-main w-full text-left leading-[3rem]">
+					<h1 className="text-white w-full text-left leading-[3rem]">
 						A Team of Experts, Crafting & Optimizing Web Solutions.
 					</h1>
 					<h2 className="text-2xl md:text-3xl w-full text-left">
@@ -55,7 +55,7 @@ const Herosection = () => {
 					experience, and performance across digital platforms.
 				</p>
 				<button
-					onClick={handleScrollToProjects}
+					onClick={handleScroll}
 					className="bg-[#8D75EE] text-white rounded-lg text-lg py-2.5 px-6 hover:bg-[#6D5DC9] md:ml-0 ml-4 transition-colors tracking-widest"
 				>
 					Let's Talk
